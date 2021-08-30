@@ -1,0 +1,86 @@
+/* NAVBAR *******************************************************************/
+
+@media (max-height: 1920px) {
+
+    nav a.navbar-brand img
+    {
+        height: 40px;
+    }
+
+    nav img.nav_img_profile
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+nav.navbar a
+{
+    color: #646464;
+    font-weight: 600;
+}
+
+
+nav form input[type="search"]
+{
+    border-width: 0.2em;
+}
+
+nav span.nav_search_icon
+{
+    position: absolute;
+    top: 25%;
+    right: 0.5rem;
+    color: #e0e0e0;
+}
+
+/* MAIN SECTION *******************************************************************/
+
+main div.main_wrapper
+{
+    margin-top: 10%;
+    margin-bottom: 2em;
+}
+
+
+/* FOOTER SECTION *******************************************************************/
+
+@media (max-height: 1920px)  {
+
+    footer {
+        height: 200px;
+    }
+
+}
+
+footer ul li.list-inline-item h5
+{
+    margin-right: 1.5em;
+}
+
+footer img
+{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+footer ul li.list-inline-item h5
+{
+    margin-top: 2em;
+}
+
+footer address h5
+{
+    margin-top: 2em;
+    margin-bottom: 1.5rem;
+}
+
+footer address
+{
+    margin-bottom: 3em;
+}
+
+
+
+

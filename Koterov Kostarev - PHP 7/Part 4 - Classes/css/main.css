@@ -1,0 +1,22 @@
+/* NAVBAR *******************************************************************/
+
+nav form span.fa-search
+{
+    position: absolute;
+    top: 25%;
+    right: 0.7rem;
+    color: #b8b8b8;
+}
+
+nav form input.form-control
+{
+    border-radius: 0.25em;
+}
+
+
+/* CONTENT SECTION *******************************************************************/
+
+main#content_section .container
+{
+    padding-top: 100px;
+}

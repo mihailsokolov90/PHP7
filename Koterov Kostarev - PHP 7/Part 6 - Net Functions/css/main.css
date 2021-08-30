@@ -1,0 +1,27 @@
+/* BODY -----------------------------------------------------------------
+*/
+
+body
+{
+    /*font-family: sans-serif, Arial;*/
+}
+
+main
+{
+    margin-top: 10%;
+    margin-bottom: 30%;
+}
+
+/* FOOTER -----------------------------------------------------------------
+*/
+
+footer {
+    background: #484848;
+    color: #fff;
+}
+
+footer img
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
