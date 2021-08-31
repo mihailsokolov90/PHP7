@@ -2,6 +2,7 @@ To: {TO}
 Subject: "Some base news"
 From: admin@localhost.ru
 Content-type: text/plain; charset=utf-8
+Replay-Nonce: Ответ от vasya@mail.ru
 
 Привет, {TO}!
 {BODY}

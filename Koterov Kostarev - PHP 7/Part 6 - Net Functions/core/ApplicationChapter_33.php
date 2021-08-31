@@ -21,7 +21,7 @@ class ApplicationChapter_33 extends ApplicationBase
 
     public function exec()
     {
-        self::RunEmailTest();
+        self::EmailEncodingTest();
     }
 
     public function RunEmailTest()
@@ -41,6 +41,8 @@ TEXT;
     {
         self::WriteHeader("Email Encoding Test");
 
+        $eml_template_path = "./core/chapter_33/mail_template.eml";
+
         $content = <<<TEXT
 Задача организации, в особенности же реализация намеченных плановых заданий в значительной степени 
 обуславливает создание направлений прогрессивного развития. Равным образом постоянное 
@@ -56,10 +58,30 @@ TEXT;
 в формировании модели развития. Значимость этих проблем настолько очевидна, что консультация с широким активом влечет за собой процесс 
 внедрения и модернизации соответствующий условий активизации.
 TEXT;
+        if( !file_exists($eml_template_path) )
+        {
+            self::WriteError("Eml file template $eml_template_path does not exists");
+            return;
+        }
 
+        $eml_template = file_get_contents($eml_template_path);
+        $tos = "Mikle <m.sokolov.kompas@gmail.com>";
+
+        $mail_content = strtr( $eml_template, [ "{TO}" => $tos, "{BODY}" => $content ] );
+
+        $mail_content_enc = $this->mailenc($mail_content);
+
+        $this->mailx($mail_content_enc);
     }
 
-    public function mail_x(string $to, string $body, string $eml_path)
+    public function activeTemplateMail()
+    {
+        self::WriteHeader("Active template mail");
+
+        $tos = "Mikhail"
+    }
+
+    public function mailxf(string $to, string $body, string $eml_path)
     {
         $headers = "";
         $content = "";
@@ -88,34 +110,68 @@ TEXT;
         mail($to, $subject_header[1], $content, $headers);
     }
 
+    public function mailx(string $mail)
+    {
+        $headers = "";
+        $content = "";
+        list($headers, $content) = preg_split('/\r?\n\r?\n/s', $mail, 2);
+
+        $to_header = "";
+        if( preg_match('{ ^To: \s*([^\r\n]+)\s*[\r\n]+ }muxi', $headers, $to_header) )
+        {
+            str_replace($headers, $to_header[0], "");
+        }
+
+        $subject_header = "";
+        if( preg_match('{ ^Subject: \s*([^\r\n]+)\s*[\r\n]+ }muxi', $headers, $subject_header) )
+        {
+            str_replace($headers, $subject_header[0], "");
+        }
+
+        mail($to_header[1], $subject_header[1], $content, $headers);
+
+        self::WriteLine("Send mail to: ".htmlentities($to_header[1]) );
+        self::WriteLine("Subject: ".$subject_header[1]);
+        self::WritePreData($content);
+    }
+
     public function mailenc(string $content)
     {
         list($header, $body) = preg_split('{\r?\n\r?\n}sux', $content, 2);
 
-        $res = preg_match('{^Content-type:\s*\S+\s*;\s*charset\s*=\s*(?<charset>\S+)\r?\n}mux', $header, &$charset_match);
+        $res = preg_match('{^Content-type:\s*\S+\s*;\s*charset\s*=\s*(\S+)\s*}mux', $header, $charset_match);
 
-        if( !$res ) return false;
-
-        $headers = [];
-        foreach (preg_split('/\r?\n/suix', $header) as $hr)
+        if( !$res )
         {
-            if( preg_match('/[^\S]+@[a-z0-9_-]+\.\w{0,5}/siux', $hr) ) {
-                $headers[] = $hr;
-                continue;
-            }
-
-            $headers[] = $this->mailenc_header($hr, $charset_match['charset']);
+            self::WriteError("Can\'t find charset");
+            return false;
+        }
+        else
+        {
+            self::WriteLine("Find charset: ".$charset_match[1]);
         }
 
-        return( implode("", $headers)."\r\n".$content );
+        $encheaders = "";
+        foreach (preg_split('/\r?\n/suix', $header) as $hr)
+        {
+            self::WriteLine("Find header: $hr");
+
+            $enc= $this->mailenc_header($hr, $charset_match[1]);
+            $encheaders .= "$enc\r\n";
+
+            self::WritePreData("Encoded: $enc");
+            self::WriteLine("-------------------------------------------------");
+        }
+
+        return( "$encheaders.\r\n.$body" );
     }
 
     public function mailenc_header($header, $charset): string
     {
-        return preg_replace_callback('/^[\x7f-\xff][^<>\r\n]*/sux',
+        return preg_replace_callback('/[\x7f-\xff][^<>\r\n]*/sux',
                 function($replace) use($charset)
                 {
-                    preg_match('/(.*?)+(\s*)/sx', $replace[0], $v);
+                    preg_match('/(.*?)+(\s*)/sux', $replace[0], $v);
                     $enc = base64_encode($v[1]);
 
                     return "=?$charset?B?$enc?=".$v[2];
