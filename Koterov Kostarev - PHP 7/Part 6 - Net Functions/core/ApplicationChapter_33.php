@@ -74,11 +74,17 @@ TEXT;
         $this->mailx($mail_content_enc);
     }
 
-    public function activeTemplateMail()
+    public function ActiveTemplateMail()
     {
         self::WriteHeader("Active template mail");
 
-        $tos = "Mikhail"
+        $tos = "Mihail <m.sokolov.kompas@gmail.com>";
+        $from = "Admin <admin@bk.ru>";
+        $content_path = "./core/chapter_33/mail_content.dat";
+        $template_path = "./core/chapter_33/template_active.eml";
+        $content = file_get_contents($content_path);
+
+
     }
 
     public function mailxf(string $to, string $body, string $eml_path)
