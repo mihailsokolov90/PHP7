@@ -21,7 +21,7 @@ class ApplicationChapter_33 extends ApplicationBase
 
     public function exec()
     {
-        self::EmailEncodingTest();
+        self::ActiveTemplateMail();
     }
 
     public function RunEmailTest()
@@ -84,7 +84,25 @@ TEXT;
         $template_path = "./core/chapter_33/template_active.eml";
         $content = file_get_contents($content_path);
 
+        $vars = [
+            "tos" => $tos,
+            "from" => $from,
+            "content" => $content
+        ];
 
+        ob_start(null, 0);
+
+        extract($vars, EXTR_OVERWRITE);
+        include ($template_path);
+
+        $buf = ob_get_contents();
+
+        ob_end_clean();
+
+        self::WritePreData($buf);
+
+        $mail = $this->mailenc($buf);
+        $this->mailx($mail);
     }
 
     public function mailxf(string $to, string $body, string $eml_path)
