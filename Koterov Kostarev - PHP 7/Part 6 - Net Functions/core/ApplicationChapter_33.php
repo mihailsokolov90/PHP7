@@ -102,7 +102,15 @@ TEXT;
         self::WritePreData($buf);
 
         $mail = $this->mailenc($buf);
+
+        if( !$mail ) {
+            self::WriteError("Sorry. Check EML template");
+            return false;
+        }
+
         $this->mailx($mail);
+
+        return true;
     }
 
     public function mailxf(string $to, string $body, string $eml_path)
