@@ -1,0 +1,35 @@
+/* ---------------------------------------------------------------------------------- */
+/* FOOTER */
+
+footer
+{
+    height: 3em;
+    min-height: 100px;
+    background-color: rgba(9,9,9,0.75);
+    color: white;
+    font-size: 13px;
+}
+
+footer .footer-brand
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+footer a, footer a:hover
+{
+    text-decoration: none;
+    text-underline: none;
+}
+
+footer a.h4
+{
+    margin-top: 2em;
+}
+
+footer address
+{
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+}
