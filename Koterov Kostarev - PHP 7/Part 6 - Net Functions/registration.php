@@ -89,10 +89,24 @@
                     <!-- REG FORM -->
                     <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
                         <div class="mb-3">
-                            <label for="main_reg_form_name" class="form-label"></label>
+                            <label for="main_reg_form_name" class="form-label">User name</label>
                             <input type="text" name="main_reg_form_name" id="main_reg_form_name" class="form-control" aria-describedby="main_reg_form_name_desc">
                             <span class="form-text" id="main_reg_form_name_desc">Your first name</span>
                         </div>
+                        <div class="mb-3">
+                            <label for="main_reg_form_email">Your email's address</label>
+                            <div class="input-group">
+                                <input type="email" name="main_reg_form_email" id="main_reg_form_email" class="form-control" aria-label="User Email" aria-describedby="main_reg_form_email_addon">
+                                <div class="input-group-text" id="main_reg_form_email_addon">@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="main_reg_form_check_info" name="main_reg_form_check_info" checked>
+                                <label for="main_reg_form_check_info">Receive </label>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
                 <div class="col-2"></div>

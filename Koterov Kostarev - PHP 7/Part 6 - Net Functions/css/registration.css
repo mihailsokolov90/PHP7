@@ -25,6 +25,11 @@ main section#main_section_headline
 }
 
 
+main section#main_section_headline span.form-text
+{
+    color: rgba(181,181,181,0.75);
+}
+
 /* ----------------------------------------------------------------------- */
 /* FOOTER */
 
