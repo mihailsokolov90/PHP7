@@ -16,7 +16,7 @@
 <body class="h-100 d-flex flex-column">
 <!-- HEADER ----------------------------------------------------------------------------------------------------- -->
 <header>
-    <nav class="navbar navbar-expand-lg sticky-top bg-light navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="img/logo.png" alt="" height="35">
@@ -85,28 +85,45 @@
             <div class="row">
                 <div class="wrap-headline col-8 offset-2">
                     <!-- MAIN CAPTION -->
-                    <h3 class="text-capitalize text-nowrap text-center text-white">User Registration</h3>
+                    <h3 class="text-nowrap text-start text-white">Регистрация нового пользователя</h3>
                     <!-- REG FORM -->
-                    <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-                        <div class="mb-3">
+                    <form action="<?=$_SERVER['PHP_SELF']?>" method="get" class="row g-3">
+                        <div class="col-6">
                             <label for="main_reg_form_name" class="form-label">User name</label>
                             <input type="text" name="main_reg_form_name" id="main_reg_form_name" class="form-control" aria-describedby="main_reg_form_name_desc">
                             <span class="form-text" id="main_reg_form_name_desc">Your first name</span>
                         </div>
-                        <div class="mb-3">
+                        <div class="col-6">
+                            <label for="main_reg_form_lastname" class="form-label">Last Name</label>
+                            <input type="text" id="main_reg_form_lastname" name="main_reg_form_lastname" class="form-control" placeholder="Last name">
+                        </div>
+                        <div class="col-12">
                             <label for="main_reg_form_email">Your email's address</label>
                             <div class="input-group">
                                 <input type="email" name="main_reg_form_email" id="main_reg_form_email" class="form-control" aria-label="User Email" aria-describedby="main_reg_form_email_addon">
                                 <div class="input-group-text" id="main_reg_form_email_addon">@gmail.com</div>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="col-12">
+                            <textarea name="main_reg_form_message" id="main_reg_form_message" cols="30" rows="10" class="form-control"
+                                      placeholder="Message (max 100 symbols)" aria-describedby="main_reg_form_messagev_desc"></textarea>
+                            <span class="form-text" id="main_reg_form_messagev_desc">Simple message (not necessary)</span>
+                        </div>
+                        <div class=col-12">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="main_reg_form_check_info" name="main_reg_form_check_info" checked>
-                                <label for="main_reg_form_check_info">Receive </label>
+                                <label for="main_reg_form_check_info" class="form-check-label">Receive important data</label>
                             </div>
                         </div>
-
+                        <div class=col-12">
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="main_reg_form_file" name="main_reg_form_file" aria-describedby="main_reg_form_file_addon">
+                                <div class="input-group-text" id="main_reg_form_file_addon">#path</div>
+                            </div>
+                        </div>
+                        <div class=col-12">
+                            <button type="submit" class="btn btn-primary">Отправить данные</button>
+                        </div>
                     </form>
                 </div>
                 <div class="col-2"></div>
@@ -124,10 +141,10 @@
                 <img src="img/logo.png" alt="Logo">
             </div>
             <div class="col-6">
-
+                <h4></h4>
             </div>
             <div class="col-4">
-
+                <h4>Site Map</h4>
             </div>
         </div>
     </div>
