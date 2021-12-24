@@ -1,0 +1,47 @@
+/* ----------------------------------------------------------------------- */
+/* HEADER */
+
+header form span#nav_form_addon_1
+{
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------- */
+/* MAIN */
+
+main div.wrap-headline
+{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+main section#main_section_headline
+{
+    background-image: url("../img/landscape.jpg");
+    background-size: cover;
+    color: white;
+}
+
+
+main section#main_section_headline span.form-text
+{
+    color: rgba(181,181,181,0.75);
+}
+
+/* ----------------------------------------------------------------------- */
+/* FOOTER */
+
+footer
+{
+    min-height: 100px;
+    background: rgba(41,41,41,0.75);
+    color: white;
+    font-size: 12px;
+}
+
+footer img
+{
+    margin-top: 2em;
+}
