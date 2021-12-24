@@ -85,6 +85,8 @@
 <!-- FOOTER SECTION ---------------------------------------------------------------------------------------------- -->
 <footer class="footer mt-auto my-3">
     <div class="container">
+        .row
+
         <div class="col-2">
             <img src="img/logo.png" alt="" class="img-fluid">
         </div>
