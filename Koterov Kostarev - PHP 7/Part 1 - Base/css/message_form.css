@@ -26,10 +26,29 @@ footer {
     min-height: 50px;
     background-color: rgba(66,66,66,0.75);
     color: #ffffff;
+    margin-top: 2rem;
 }
 
 footer nav
 {
     margin-top: 1em;
+    margin-bottom: 2em;
+    color: rgba(248, 246, 246, 0.87);
+}
+
+footer nav li.nav-item a.nav-link
+{
+    margin-top: 1em;
+    color: rgba(248, 246, 246, 0.87);
+    font-size: 18px;
+}
+
+footer nav li.nav-item a.nav-link:hover
+{
+    color: rgba(10, 212, 212, 0.87);
+}
+
+footer img
+{
     margin-bottom: 2em;
 }

@@ -29,13 +29,13 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <span class="fa fa-home"></span>
-                            <sapn>Main</sapn>
+                            <span>Main</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <span class="fa fa-home"></span>
-                            <sapn>Links</sapn>
+                            <span>Links</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
