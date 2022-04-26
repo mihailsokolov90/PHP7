@@ -60,9 +60,11 @@
 <main class="flex-shrink-0">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h3>Some Content</h3>
-                <img src="img/landscape.jpg" alt="" class="img-fluid">
+            <div class="bg-space">
+                <div class="col">
+                    <h3>some content</h3>
+                    <!--                    <img src="img/landscape.jpg" alt="" class="img-fluid my-2">-->
+                </div>
             </div>
         </div>
     </div>

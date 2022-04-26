@@ -19,6 +19,20 @@ header nav img.navbar-brand-img
 /* -------------------------------------------------------------------------------------------
  * MAIN */
 
+main {
+    color: rgba(66,66,66,0.03);
+}
+
+main div.bg-space
+{
+    background-image: url("../img/landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    position: relative;
+}
+
 /* -------------------------------------------------------------------------------------------
  * FOOTER */
 

@@ -17,6 +17,10 @@ wp-content/themes/twenty*/
 # ignore node dependency directories
 node_modules/
 
+#dirs
+fontawesome-free-6.1.1-web/
+fontawesome-free-6.1.1-web/*
+
 # ignore log files and databases
 *.log
 *.sql
