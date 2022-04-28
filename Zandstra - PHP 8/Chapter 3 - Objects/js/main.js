@@ -70,5 +70,5 @@ $(document).ready(function()
 {
     let c = document.getElementById("main_console");
     let js = new JSMain(c);
-    js.writeLine("Running...");
+    //js.writeLine("Running...");
 })

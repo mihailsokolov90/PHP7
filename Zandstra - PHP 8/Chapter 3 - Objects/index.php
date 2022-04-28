@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en">
-<head class="h-100">
+<html lang="en" class="h-100">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -76,13 +76,19 @@
 <main class="flex-shrink-0">
     <div class="container">
         <div class="row">
-            <div class="console" id="main_console"></div>
+            <div class="console" id="main_console">
+                <?php
+                require_once "./engine/Application.php";
+                $app = new \core\Application();
+                $app->Exec();
+                ?>
+            </div>
         </div>
     </div>
 </main>
 <!-- END OF MAIN -------------------------------------------------------------------------------->
 <!-- FOOTER --------------------------------------------------------------------------------------->
-<footer class="mt-auto">
+<footer class="mt-auto footer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-3">
