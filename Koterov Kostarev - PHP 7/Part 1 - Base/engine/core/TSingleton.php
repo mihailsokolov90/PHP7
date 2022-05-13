@@ -1,22 +1,21 @@
 <?php
+/*
+ * @brief - Singleton trait
+ */
 
 namespace core;
 
-require_once "ISingleton.php";
-
 trait TSingleton
 {
-    protected static $_instance = null;
+    protected static $m_instance = null;
 
-    /**
-     * @return null
-     */
     public static function getInstance()
     {
-        if( self::$_instance === null )
+        if( self::$m_instance === null )
         {
-            self::$_instance = new static();
+            self::$m_instance = new static();
         }
-        return self::$_instance;
+
+        return self::$m_instance;
     }
 }

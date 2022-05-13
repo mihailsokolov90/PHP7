@@ -2,32 +2,61 @@
 
 namespace core;
 
-require_once "IApplicationCore.php";
-require_once "ISingleton.php";
+//define('__ROOT__', dirname( dirname(__FILE__) ));
+
+require_once ("TSingleton.php");
+require_once ("ISingleton.php");
+require_once ("IApplicationCore.php");
 
 
-class ApplicationCore implements IApplicationCore, ISingleton
+class ApplicationCore implements ISingleton, IApplicationCore
 {
-    # Traits --------------------------------------------------
-    use TSingleton;
+    use TSingleton
+    {
+        TSingleton::getInstance as instance;
+    }
 
-    # Fields --------------------------------------------------
+    # Fields ------------------------------------------------------------------------
+    protected string $_title = "No";
 
-    # Ctor --------------------------------------------------
+    # Ctor ------------------------------------------------------------------------
     protected function __construct()
     {
-        //
+        $this->_title = "Create chapter instance";
     }
 
-    # Properties --------------------------------------------------
-    public static function Title(): string
+    # IApplicationCore ------------------------------------------------------------------------
+
+    public function Exec(): void
     {
-        return "Chapter 1: Bases of Internet";
+        self::WriteHeader($this->_title);
+        // TODO: Implement Exec() method.
     }
 
-    # Base Methods --------------------------------------------------
-    public function Exec()
+    public function Title(): string
     {
-        echo phpinfo();
+        return $this->_title;
+    }
+
+    public static function WriteHeader(string $hr, int $level = 4): void
+    {
+        echo "<h".$level.">".$hr."</h".$level.">\n";
+    }
+
+    public static function WriteLine(string $str, bool $indent = false): void
+    {
+        if( $indent ) echo "<p>\n";
+        echo $str."<br/>\n";
+        if( $indent ) echo "</p>\n";
+    }
+
+    public static function WriteArray(array $arr): void
+    {
+        // TODO: Implement WriteArray() method.
+    }
+
+    public static function WriteData(mixed $data): void
+    {
+        // TODO: Implement WriteData() method.
     }
 }
