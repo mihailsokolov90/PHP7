@@ -35,7 +35,14 @@ footer
     min-height: 50px;
 }
 
+footer address
+{
+    color: #fff;
+    font-size: 14px;
+}
+
 footer h4, h5
 {
     color: #fff;
+    margin-top: 2em;
 }
