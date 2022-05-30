@@ -9,6 +9,7 @@
     <!-- CSS ----------------------------------------------------------------------------------------------------->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../fontawesome-free-6.1.1-web/css/all.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- END OF CSS ---------------------------------------------------------------------------------------------->
 </head>
@@ -28,11 +29,44 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <span class="fa "></span>
+                            <span class="fa fa-home"></span>
                             <span>Main</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="fa fa-pencil"></span>
+                            <span>Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="fa fa-store"></span>
+                            <span>Shop</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="fa fa-contact-book"></span>
+                            <span>Addresses</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="fa fa-question"></span>
+                            <span>About</span>
+                        </a>
+                    </li>
                 </ul>
+                <!-- Search Form --------------------------------------------------------------------------------->
+                <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get" class="ms-auto d-flex flex-row align-items-center">
+                    <div class="input-group py-0 my-0">
+                        <span class="input-group-text" id="input_group_addition_search"><a href="#" class="fa fa-search"></a></span>
+                        <input type="search" class="form-control" placeholder="Serach item" name="nav_form_search_text"
+                               aria-label="search_label" aria-describedby="input_group_addition_search">
+                    </div>
+                    <button type="submit" role="button" class="btn btn-outline-success mx-1 my-2">Find</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -91,6 +125,7 @@
 <!-- JS ----------------------------------------------------------------------------------------------------->
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../../fontawesome-free-6.1.1-web/js/all.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <!-- END OF JS ---------------------------------------------------------------------------------------------->
 </body>

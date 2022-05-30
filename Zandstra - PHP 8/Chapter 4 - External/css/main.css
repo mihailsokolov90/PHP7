@@ -17,6 +17,17 @@ header nav img.navbar-brand-img
     height: 35px;
 }
 
+header nav form
+{
+    height: 35px;
+}
+
+header nav form button
+{
+    height: 35px;
+    width: 80px;
+}
+
 /* ----------------------------------------------------------------------------------------
 MAIN */
 
