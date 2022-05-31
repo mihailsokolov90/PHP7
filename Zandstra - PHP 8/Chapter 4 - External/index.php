@@ -62,7 +62,7 @@
                 <form action="<?=$_SERVER['SCRIPT_NAME']?>" method="get" class="ms-auto d-flex flex-row align-items-center">
                     <div class="input-group py-0 my-0">
                         <span class="input-group-text" id="input_group_addition_search"><a href="#" class="fa fa-search"></a></span>
-                        <input type="search" class="form-control" placeholder="Serach item" name="nav_form_search_text"
+                        <input type="search" class="form-control" placeholder="Search item" name="nav_form_search_text"
                                aria-label="search_label" aria-describedby="input_group_addition_search">
                     </div>
                     <button type="submit" role="button" class="btn btn-outline-success mx-1 my-2">Find</button>
@@ -94,19 +94,19 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h4>Main</h4>
+                            <h5><a href="#">Main</a></h5>
                         </div>
                         <div class="col">
-                            <h4>Products</h4>
+                            <h5>Products</h5>
                         </div>
                         <div class="col">
-                            <h4>Contacts</h4>
+                            <h5>Contacts</h5>
                         </div>
                         <div class="col">
-                            <h4>Help</h4>
+                            <h5>Help</h5>
                         </div>
                         <div class="col">
-                            <h4>Authors</h4>
+                            <h5>Authors</h5>
                         </div>
                     </div>
                 </div>

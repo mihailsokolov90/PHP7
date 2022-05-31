@@ -57,3 +57,10 @@ footer h4, h5
     color: #fff;
     margin-top: 2em;
 }
+
+footer h5 a
+{
+    color: #fff;
+    text-decoration: none;
+    text-underline: none;
+}
