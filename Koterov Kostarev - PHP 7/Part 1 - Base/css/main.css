@@ -1,52 +1,63 @@
-/* ----------------------------------------------------------------------------------------
-GLOBAL  */
+/* ---------------------------------------------------------------------------------------------------
+ * HEADER */
 
-
-/* ----------------------------------------------------------------------------------------
-HEADER  */
-
-header nav
+header
 {
     height: 40px;
 }
 
-header nav img.navbar-brand-img
+header img.navbar-brand-img
 {
-    height: 40px;
+    height: 35px;
 }
 
-
-/* ----------------------------------------------------------------------------------------
-MAIN  */
+/* ---------------------------------------------------------------------------------------------------
+ * Main   */
 
 main
 {
     margin-top: 2em;
-    margin-bottom: 2em;
 }
 
+main div.console
+{
+    background-image: url("../img/landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2px;
+    height: 600px;
+}
 
-/* ----------------------------------------------------------------------------------------
-FOOTER  */
+/* ---------------------------------------------------------------------------------------------------
+ * FOOTER */
 
 footer
 {
-    background-color: #414a42;
+    background: #444444;
     color: #fff;
+    min-height: 50px;
 }
 
-footer h4
+footer h4, footer h5
+{
+    color: #fff;
+    margin-top: 2em;
+}
+
+footer a.h5
 {
     margin-top: 2em;
 }
 
-footer img
+footer a, footer a:hover
 {
-    margin-bottom: 3em;
+    color: #fff;
+    text-decoration: none;
+    text-underline: none;
 }
 
-footer address
+footer address, footer img
 {
-    color: #edf6ee;
     margin-top: 2em;
+    margin-bottom: 2em;
 }
