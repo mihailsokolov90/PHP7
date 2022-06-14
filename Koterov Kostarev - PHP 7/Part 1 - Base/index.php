@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../../fontawesome-free-6.1.1-web/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- END OF CSS ---------------------------------------------------------------------------------------------->
+    <?php
+    require_once "./engine/Application.php";
+    ?>
 </head>
 <body class="h-100 d-flex flex-column">
 <!-- HEADER ----------------------------------------------------------------------------------------------------->
@@ -72,15 +75,18 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h4>Content</h4>
-                <div class="console" id="main_console"></div>
+                <div class="console" id="main_console">
+                    <?php
+                    app\Application::instance()->Exec();
+                    ?>
+                </div>
             </div>
         </div>
     </div>
 </main>
 <!-- END OF MAIN ---------------------------------------------------------------------------------------------->
 <!-- FOOTER ----------------------------------------------------------------------------------------------------->
-<footer class="mt-auto py-1">
+<footer class="mt-auto">
     <div class="container-fluid">
         <div class="row">
             <div class="col-3">
@@ -115,6 +121,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-3">
+                <h5>Address</h5>
+                <address>
+                    Some address string... <br>
+                </address>
             </div>
         </div>
     </div>

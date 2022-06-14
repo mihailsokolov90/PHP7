@@ -26,6 +26,10 @@ main div.console
     background-size: cover;
     padding: 2px;
     height: 600px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 2em;
+    margin-bottom: 4em;
 }
 
 /* ---------------------------------------------------------------------------------------------------
@@ -35,7 +39,6 @@ footer
 {
     background: #444444;
     color: #fff;
-    min-height: 50px;
 }
 
 footer h4, footer h5
