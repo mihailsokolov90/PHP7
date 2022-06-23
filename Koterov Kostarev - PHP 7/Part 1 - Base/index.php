@@ -53,6 +53,12 @@
                             <span>Sells</span>
                         </a>
                     </li>
+                    </li><li class="nav-item">
+                        <a href="registration.php" class="nav-link">
+                            <span class="fa fa-registered"></span>
+                            <span>Registration</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- NAVBAR SEARCH FORM -->
                 <form action="" method="get" class="d-flex flex-row ms-auto align-items-center">
