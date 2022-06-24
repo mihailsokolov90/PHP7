@@ -54,7 +54,7 @@ footer img
     margin-bottom: 3em;
 }
 
-footer a, footer:hover
+footer a, footer a:hover
 {
     color: #fff;
     text-decoration: none;
